@@ -1,10 +1,8 @@
-import PracticeWork from "./componetn/practiceWork";
+import Boimela from "./componetn/Boimela";
 import "./App.css";
 function App() {
-  return (
-    <div>
-      <PracticeWork />
-    </div>
+  return(
+      <Boimela/>
   );
 }
 
