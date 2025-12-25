@@ -1,0 +1,8 @@
+@import "tailwindcss";
+.my-task{
+    font-size: 30px;
+    color: green;
+    text-align: center;
+    padding: 20px;
+    background-color: aquamarine;
+}
