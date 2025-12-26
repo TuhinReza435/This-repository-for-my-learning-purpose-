@@ -1,11 +1,11 @@
-import React from 'react';
+import Box from "./box";
+import Premium from "./premium";
 
-const Search = () => {
-    return (
-        <div>
-            Search
-        </div>
-    );
-};
-
-export default Search;
+export default function Search() {
+  return (
+    <div>
+      <Box />
+      <Premium />
+    </div>
+  );
+}

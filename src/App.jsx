@@ -1,9 +1,10 @@
-import Boimela from "./componetn/Boimela";
-import "./App.css";
-function App() {
-  return(
-      <Boimela/>
-  );
-}
+import Carshop from "./componetn/Carshop";
 
-export default App;
+
+export default function App() {
+  return (
+    <div>
+      <Carshop/>
+    </div>
+  )
+}
