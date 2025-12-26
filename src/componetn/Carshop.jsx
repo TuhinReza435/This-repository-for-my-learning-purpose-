@@ -1,16 +1,15 @@
-import CarList from "./CarList"
-import Header from "./Header"
-import Search from "./Search"
+import CarList from "./CarList";
+import Header from "./Header";
+import Search from "./Search";
 
 function Carshop() {
   return (
     <div>
-       
-         <Header/>
-         <Search/>
-         <CarList/>
+      <Header />
+      <Search />
+      <CarList />
     </div>
-  )
+  );
 }
 
-export default Carshop
+export default Carshop;
