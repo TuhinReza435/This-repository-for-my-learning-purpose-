@@ -1,5 +1,5 @@
 import Box from "./Box";
-import Premium from "./premium";
+import Premium from "./Premium";
 
 export default function Search({
   searchItem,
