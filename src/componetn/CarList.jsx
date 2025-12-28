@@ -1,56 +1,35 @@
 import CarDetails from "./CarDetails";
 
-const Cars = [
-  {
-    id: 1,
-    title: "Luxury Sedan",
-    brand: "Mercedes",
-    year: 2023,
-    price: 80000,
-    isPremium: true,
-  },
-  {
-    id: 2,
-    title: "Family SUV",
-    brand: "Toyota",
-    year: 2022,
-    price: 45000,
-    isPremium: false,
-  },
-  {
-    id: 3,
-    title: "Sports Car",
-    brand: "Porsche",
-    year: 2023,
-    price: 120000,
-    isPremium: true,
-  },
-  {
-    id: 4,
-    title: "Electric Hatchback",
-    brand: "Nissan",
-    year: 2022,
-    price: 35000,
-    isPremium: false,
-  },
-  {
-    id: 5,
-    title: "Luxury SUV",
-    brand: "BMW",
-    year: 2023,
-    price: 90000,
-    isPremium: true,
-  },
-];
+export default function CarList({ cars, searchElement, isChacked }) {
+  const rows = [];
 
-export default function CarList() {
-  return (
-    <div className="flex flex-wrap gap-4 p-10 w-full bg-gray-50">
-      {Cars.map((details) => (
-        <div key={details.id} className="flex-grow basis-[calc(33.33%-1rem)]">
-          <CarDetails detail={details} />
+  const searchTerm = searchElement || "";
+
+  cars.forEach((element) => {
+    if (element.title.toLowerCase().indexOf(searchTerm.toLowerCase()) === -1) {
+      return;
+    }
+
+    if (isChacked == true) {
+      if (element.isPremium == true) {
+        rows.push(
+          <div key={element.id} className="flex-grow basis-[calc(33.33%-1rem)]">
+            <CarDetails detail={element} />
+          </div>
+        );
+      }
+      return;
+    }
+    {
+      rows.push(
+        <div key={element.id} className="flex-grow basis-[calc(33.33%-1rem)]">
+          <CarDetails detail={element} />
         </div>
-      ))}
-    </div>
+      );
+    }
+  });
+
+  return (
+    <div className="flex flex-wrap gap-4 p-10 w-full bg-gray-50">{rows}</div>
   );
 }
