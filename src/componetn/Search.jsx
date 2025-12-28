@@ -1,4 +1,4 @@
-import Box from "./box";
+import Box from "./Box";
 import Premium from "./premium";
 
 export default function Search({ searchItem, onsetSearchItem, isChacked, onsetIsChacked }) {
