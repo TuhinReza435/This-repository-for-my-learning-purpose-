@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import Box from "./Box";
+=======
+import Box from "./Box"; 
+>>>>>>> e9760e0 (sdfkj)
 import Premium from "./Premium";
 
 export default function Search({

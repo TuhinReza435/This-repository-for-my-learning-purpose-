@@ -10,8 +10,8 @@ export default function CarList({ cars, searchElement, isChacked }) {
       return;
     }
 
-    if (isChacked == true) {
-      if (element.isPremium == true) {
+    if (isChacked === true) {
+      if (element.isPremium === true) {
         rows.push(
           <div key={element.id} className="flex-grow basis-[calc(33.33%-1rem)]">
             <CarDetails detail={element} />
